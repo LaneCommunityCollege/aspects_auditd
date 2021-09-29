@@ -4,7 +4,7 @@ galaxy_info:
   description: Install and configure AuditD
   company: Lane Community College
   license: MIT
-  min_ansible_version: 2.8
+  min_ansible_version: 2.10
   platforms:
   - name: CentOS
     versions:
@@ -21,8 +21,7 @@ galaxy_info:
     versions:
       - 7
   categories:
-  - development
-  - web
+  - system
 dependencies:
   - { role: aspects_packages, when: aspects_packages_enabled and aspects_auditd_enabled }
   # List your role dependencies here, one per line. Only

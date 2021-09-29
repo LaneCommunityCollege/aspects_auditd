@@ -4,6 +4,7 @@
     name: "auditd"
     state: restarted
     enabled: yes
+    use: "{% if ansible_os_family == 'RedHat' %}/sbin/service{% else %}auto{% endif %}"
   tags:
     - aspects_auditd
 
@@ -12,6 +13,7 @@
     name: "auditd"
     state: reloaded
     enabled: yes
+    use: "{% if ansible_os_family == 'RedHat' %}/sbin/service{% else %}auto{% endif %}"
   tags:
     - aspects_auditd
 
@@ -20,6 +22,7 @@
     name: "auditd"
     state: started
     enabled: yes
+    use: "{% if ansible_os_family == 'RedHat' %}/sbin/service{% else %}auto{% endif %}"
   tags:
     - aspects_auditd
 
@@ -28,5 +31,6 @@
     name: "auditd"
     state: stopped
     enabled: no
+    use: "{% if ansible_os_family == 'RedHat' %}/sbin/service{% else %}auto{% endif %}"
   tags:
     - aspects_auditd
