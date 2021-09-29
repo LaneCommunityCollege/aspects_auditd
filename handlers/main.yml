@@ -1,0 +1,32 @@
+
+- name: "restart auditd"
+  service:
+    name: "auditd"
+    state: restarted
+    enabled: yes
+  tags:
+    - aspects_auditd
+
+- name: "reload auditd"
+  service:
+    name: "auditd"
+    state: reloaded
+    enabled: yes
+  tags:
+    - aspects_auditd
+
+- name: "start auditd"
+  service:
+    name: "auditd"
+    state: started
+    enabled: yes
+  tags:
+    - aspects_auditd
+
+- name: "stop auditd"
+  service:
+    name: "auditd"
+    state: stopped
+    enabled: no
+  tags:
+    - aspects_auditd

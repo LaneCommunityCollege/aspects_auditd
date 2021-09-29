@@ -1,0 +1,5 @@
+- name: "Include role tasks."
+  when: aspects_auditd_enabled
+  include_tasks: "init.yml"
+  tags:
+    - aspects_auditd

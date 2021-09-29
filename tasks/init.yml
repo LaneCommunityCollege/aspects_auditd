@@ -1,0 +1,46 @@
+- name: "Template /etc/audit/auditd.conf"
+  when: aspects_auditd_override_auditd_conf
+  template:
+    dest: "/etc/audit/auditd.conf"
+    src: "etc-audit-auditd.conf.j2"
+    owner: "root"
+    group: "root"
+    mode: "0640"
+  notify: "restart auditd"
+  tags:
+    - aspects_auditd
+
+- name: "Template /etc/audit/audit.rules"
+  when: aspects_auditd_override_audit_rules
+  template:
+    dest: "/etc/audit/audit.rules"
+    src: "etc-audit-audit.rules.j2"
+    owner: "root"
+    group: "root"
+    mode: "0640"
+  notify: "restart auditd"
+  tags:
+    - aspects_auditd
+
+- name: "Template /etc/audit/audit-stop.rules"
+  when: aspects_auditd_override_audit_stop_rules
+  template:
+    dest: "/etc/audit/audit-stop.rules"
+    src: "etc-audit-audit-stop.rules.j2"
+    owner: "root"
+    group: "root"
+    mode: "0640"
+  notify: "restart auditd"
+  tags:
+    - aspects_auditd
+
+- name: "Template /etc/audit/rules.d/99-custom.rules"
+  template:
+    dest: "/etc/audit/rules.d/99-custom.rules"
+    src: "etc-audit-rules-d-99-custom.rules.j2"
+    owner: "root"
+    group: "root"
+    mode: "0640"
+  notify: "restart auditd"
+  tags:
+    - aspects_auditd

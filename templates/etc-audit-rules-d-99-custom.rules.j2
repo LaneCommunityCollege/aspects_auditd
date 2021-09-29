@@ -1,0 +1,5 @@
+{% for item in aspects_auditd_rules_d_99_custom_values | dictsort %}
+{% if item.1.enabled %}
+{{ item.1.block }}
+{% endif %}
+{% endfor %}

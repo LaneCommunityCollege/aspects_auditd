@@ -1,0 +1,47 @@
+aspects_auditd_enabled: False
+
+aspects_packages_packages:
+  auditd:
+    state: "present"
+    Ubuntu:
+      1804: "auditd"
+      2004: "auditd"
+    Debian:
+      9: "auditd"
+      10: "auditd"
+    CentOS7:
+      7: "audit"
+    OracleLinux:
+      7: "audit"
+
+aspects_auditd_override_auditd_conf: False
+aspects_auditd_override_auditd_conf_values: {}
+#aspects_auditd_override_auditd_conf_values:
+#  item:
+#    enabled: True
+#    block: |
+#      key = value
+
+aspects_auditd_override_audit_rules: False
+aspects_auditd_override_audit_rules_values: {}
+#aspects_auditd_override_audit_rules_values:
+#  item:
+#    enabled: True
+#    block: |
+#      line
+
+aspects_auditd_override_audit_stop_rules: False
+aspects_auditd_override_audit_stop_rules_values: {}
+#aspects_auditd_override_audit_stop_rules_values:
+#  item:
+#    enabled: True
+#    block: |
+#      line
+
+
+aspects_auditd_rules_d_99_custom_values:
+  0000topcomment:
+    enabled: True
+    block: |
+      # This file is where you can story custom
+      # auditd rules.
