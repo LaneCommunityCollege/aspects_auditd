@@ -1,7 +1,7 @@
 aspects_auditd_enabled: False
 
 aspects_auditd_override_auditd_conf: False
-aspects_auditd_override_auditd_conf_values: {}
+aspects_auditd_override_auditd_conf_values: { }
 #aspects_auditd_override_auditd_conf_values:
 #  item:
 #    enabled: True
@@ -9,7 +9,7 @@ aspects_auditd_override_auditd_conf_values: {}
 #      key = value
 
 aspects_auditd_override_audit_rules: False
-aspects_auditd_override_audit_rules_values: {}
+aspects_auditd_override_audit_rules_values: { }
 #aspects_auditd_override_audit_rules_values:
 #  item:
 #    enabled: True
@@ -17,7 +17,7 @@ aspects_auditd_override_audit_rules_values: {}
 #      line
 
 aspects_auditd_override_audit_stop_rules: False
-aspects_auditd_override_audit_stop_rules_values: {}
+aspects_auditd_override_audit_stop_rules_values: { }
 #aspects_auditd_override_audit_stop_rules_values:
 #  item:
 #    enabled: True
@@ -38,8 +38,8 @@ aspects_packages_packages:
     Ubuntu:
       1804: "auditd"
       2004: "auditd"
+      2204: "auditd"
     Debian:
-      9: "auditd"
       10: "auditd"
     CentOS7:
       7: "audit"
