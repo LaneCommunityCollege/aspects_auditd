@@ -45,3 +45,5 @@ aspects_packages_packages:
       7: "audit"
     OracleLinux:
       7: "audit"
+      8: "audit"
+      9: "audit"
