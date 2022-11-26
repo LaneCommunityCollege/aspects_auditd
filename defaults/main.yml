@@ -41,6 +41,7 @@ aspects_packages_packages:
       2204: "auditd"
     Debian:
       10: "auditd"
+      11: "auditd"
     CentOS7:
       7: "audit"
     OracleLinux:
